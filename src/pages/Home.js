@@ -6,8 +6,6 @@ import { DatePicker, Space } from "antd";
 import { OnBoarding } from 'antd-onboarding';
 import 'antd-onboarding/assets/index.css';
 import 'antd/dist/antd.css';
-import { useEffect } from "react";
-import ReactDOM from "react-dom";
 import ReactApexChart from "react-apexcharts";
 import { Line } from '@ant-design/charts';
 import { Pie } from "@ant-design/charts";
@@ -17,15 +15,9 @@ import {
   Col,
   Row,
   Typography,
-  Tooltip,
-  Progress,
   Table,
   Input,
-  Upload,
-  message,
   Button,
-  Timeline,
-  Radio,
 } from "antd";
 
 import { AudioOutlined } from "@ant-design/icons";
@@ -48,23 +40,6 @@ function Home() {
     setEnabled(false)
   }
 
-  /*  const steps = [
-     {
-       element: '.linkcreate',
-       intro: 'You can use this button for Creating Your Own Shorten URL ',
-       position: 'right',
-     },
-     {
-       element: '.full-width',
-       intro: 'You can see the stats of your Link Generated',
-       position: 'down',
-     },
-     {
-       element: '.linkshow',
-       intro: 'You can see detailed stats of each Link',
-     },
- 
-   ]; */
 
   const dollor = [
     <svg
@@ -93,32 +68,30 @@ function Home() {
   ];
 
 
-  // pie data 
-
   const piedata = [
     {
       type: 'Week 1',
-      value: 27,
+      value: 45,
     },
     {
       type: 'Week 2',
-      value: 25,
+      value: 55,
     },
     {
       type: 'Week 3',
-      value: 18,
+      value: 47,
     },
     {
       type: 'Week 4',
-      value: 15,
+      value: 61,
     },
     {
       type: 'Week 5',
-      value: 10,
+      value: 72,
     },
     {
       type: 'Week 6',
-      value: 5,
+      value: 34,
     },
   ];
   const config = {
@@ -146,12 +119,11 @@ function Home() {
           overflow: 'hidden',
           textOverflow: 'ellipsis',
         },
-        content: 'Total:120',
+        content: 'Total:335',
       },
     },
   };
 
-  //chart data
 
   const profile = [
     <svg
@@ -219,28 +191,28 @@ function Home() {
   const count = [
     {
       today: "Clicks",
-      title: "14",
+      title: "335",
       persent: "+30%",
       icon: dollor,
       bnb: "bnb2",
     },
     {
       today: "Installs",
-      title: "2",
+      title: "-",
       persent: "+20%",
       icon: profile,
       bnb: "bnb2",
     },
     {
       today: "Open",
-      title: "+12",
+      title: "+144",
       persent: "20%",
       icon: heart,
       bnb: "redtext",
     },
     {
       today: "Views",
-      title: "32",
+      title: "82",
       persent: "10%",
       icon: cart,
       bnb: "bnb2",
@@ -308,48 +280,19 @@ function Home() {
 
 
   const myData = [
-    { x: 'Jan', y: 0 },
-    { x: 'Feb', y: 2 },
-    { x: 'Mar', y: 4 },
-    { x: 'Apr', y: 11 },
-    { x: 'May', y: 9 },
-    { x: 'Jun', y: 14 },
-    { x: 'Jul', y: 19 },
-    { x: 'Aug', y: 17 },
-    { x: 'Sep', y: 22 },
-    { x: 'Oct', y: 24 },
-    { x: 'Nov', y: 23 },
-    { x: 'Dec', y: 27 },
+    { x: 'Jan', y: 45 },
+    { x: 'Feb', y: 42 },
+    { x: 'Mar', y: 53 },
+    { x: 'Apr', y: 62 },
+    { x: 'May', y: 64 },
+    { x: 'Jun', y: 54 },
+    { x: 'Jul', y: 59 },
+    { x: 'Aug', y: 47 },
+    { x: 'Sep', y: 0 },
+    { x: 'Oct', y: 0},
+    { x: 'Nov', y: 0},
+    { x: 'Dec', y: 0},
   ];
-
-  // fetching data for the show stats button
-
-  // async function exe(){
-  //   // let {customeHashID}='gov32';
-  //   const url='http://localhost:3233/gov32'
-  // const response=await fetch(url);
-
-  // const stats=await response.json();
-  // console.log(stats);
-  // return stats;
-  // }
-
-  // exe();
-
-  // exe().then(stats=>{
-  //   const customeHashID=stats.map(
-  //     function (index){
-  //       return index.customeHashID;
-  //     }
-  //   );
-
-  //   console.log(customeHashID);
-
-
-
-  // }).catch((error)=>{
-  //   console.log('fetch data failed', error);
-  // })
 
   async function tab() {
     const url = 'http://localhost:3233/dashboard_table'
@@ -428,29 +371,15 @@ function Home() {
 
   const data = [
     {
-      date: "2022-07-09",
-      name: "Samagra Website",
-      url: <a href="https://yaus.xyz/education">https://yaus.xyz/education</a>,
+      date: "2022-08-17",
+      name: "Smart India Hackathon",
+      url: <a href="https://yaus.xyz/SIH">https://yaus.xyz/SIH</a>,
       views: "82",
-      install: "89",
-      clicks: "35",
-      open: "59",
+      install: "-",
+      clicks: "335",
+      open: "144",
 
 
-      action: (
-        <Button onClick={() => setVisible(true)} type="primary">
-          Show Statistics
-        </Button>
-      ),
-    },
-    {
-      date: "2022-06-22",
-      name: "My First Link",
-      url: <a href=" https://yaus.xyz/govt"> https://yaus.xyz/govt</a>,
-      views: "28",
-      install: "64",
-      clicks: "33",
-      open: "95",
       action: (
         <Button onClick={() => setVisible(true)} type="primary">
           Show Statistics
@@ -459,12 +388,54 @@ function Home() {
     },
     {
       date: "2022-07-19",
-      name: "Competency Passbook",
-      url: <a href="https://yaus.xyz/design">https://yaus.xyz/design</a>,
-      views: "86",
-      install: "23",
-      clicks: "34",
-      open: "19",
+      name: "Sunbird",
+      url: <a href=" https://yaus.xyz/sunbird842"> https://yaus.xyz/sunbird842</a>,
+      views: "56",
+      install: "-",
+      clicks: "121",
+      open: "140",
+      action: (
+        <Button onClick={() => setVisible(true)} type="primary">
+          Show Statistics
+        </Button>
+      ),
+    },
+    {
+      date: "2022-07-19",
+      name: "Sunbird",
+      url: <a href=" https://yaus.xyz/sunbird371"> https://yaus.xyz/sunbird371</a>,
+      views: "68",
+      install: "-",
+      clicks: "125",
+      open: "110",
+      action: (
+        <Button onClick={() => setVisible(true)} type="primary">
+          Show Statistics
+        </Button>
+      ),
+    },
+    {
+      date: "2022-07-19",
+      name: "Sunbird",
+      url: <a href="https://yaus.xyz/sunbird437">https://yaus.xyz/sunbird437</a>,
+      views: "56",
+      install: "-",
+      clicks: "124",
+      open: "149",
+      action: (
+        <Button onClick={() => setVisible(true)} type="primary">
+          Show Statistics
+        </Button>
+      ),
+    },
+    {
+      date: "2022-07-19",
+      name: "Sunbird",
+      url: <a href="https://yaus.xyz/sunbird752">https://yaus.xyz/sunbird752</a>,
+      views: "96",
+      install: "-",
+      clicks: "134",
+      open: "131",
       action: (
         <Button onClick={() => setVisible(true)} type="primary">
           Show Statistics
@@ -473,12 +444,12 @@ function Home() {
     },
     {
       date: "2022-07-03",
-      name: "Hackerank",
-      url: <a href="https://yaus.xyz/create">https://yaus.xyz/create</a>,
+      name: "Competency Passbook",
+      url: <a href="https://yaus.xyz/passbook">https://yaus.xyz/create</a>,
       views: "68",
-      install: "32",
-      clicks: "31",
-      open: "55",
+      install: "-",
+      clicks: "168",
+      open: "128",
       action: (
         <Button onClick={() => setVisible(true)} type="primary">
           Show Statistics
@@ -506,13 +477,6 @@ function Home() {
 
   return (
     <>
-
-      {/*  <Steps
-        enabled={enabled}
-        steps={steps}
-        initialStep={initialStep}
-        onExit={onExit}
-      /> */}
       <div class="MyApp">
 
         <Space direction="vertical" size={12}>
@@ -530,6 +494,7 @@ function Home() {
 
         >
           <>
+          <div> <Card bordered={true}><h3> https://yaus.xyz/education </h3></Card></div>
             <Row className="rowgap-vbox" gutter={[24, 0]}>
               {count.map((c, index) => (
                 <Col
@@ -605,7 +570,7 @@ function Home() {
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;
         <NavLink to="/LinkCreate" className="linkcreate">
-          <Button type="primary">Create Your Link</Button>
+          <Button type="primary">Create  Link</Button>
         </NavLink>
 
         <>
@@ -658,9 +623,6 @@ function Home() {
             ]
           } />
       </div>
-
-      {/* </div>
-      </div> */}
     </>
   );
 }

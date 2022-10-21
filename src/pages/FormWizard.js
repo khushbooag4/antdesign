@@ -201,11 +201,11 @@ const FormDemo = () => {
     return (
         <div classname="layout-content">
             <Steps current={current}>
-                <Step key={0} title="First Step" />
-                <Step key={1} title="Second Step" />
-                <Step key={2} title="Third Step" />
-                <Step key={3} title="Fourth Step" />
-                <Step key={4} title="Success" />
+                <Step key={0} title="Step 1" />
+                <Step key={1} title="Step 2" />
+                <Step key={2} title="Step3 " />
+                <Step key={3} title="Step 4" />
+                <Step key={4} title="Step 5" />
             </Steps>
             <div style={{ margin: "50px 10px" }}>
                 <Form form={form}
@@ -593,15 +593,13 @@ const FormDemo = () => {
 
                             <Row gutter={[24, 0]}>
                                 <Col xs={24} sm={24} md={12} lg={12} xl={12} className="mb-24">
-                                    <Alert message="Success Tips" type="success" showIcon />
+                                    <Alert message="Naming Link" type="success" showIcon />
                                     <br></br>
-                                    <Alert message="Success Tips" type="success" showIcon />
+                                    <Alert message="Analytics Tags" type="success" showIcon />
                                     <br></br>
-                                    <Alert message="Success Tips" type="success" showIcon />
+                                    <Alert message="Redirect" type="warning" showIcon />
                                     <br></br>
-                                    <Alert message="Success Tips" type="success" showIcon />
-                                    <br></br>
-                                    <Alert message="Success Tips" type="success" showIcon />
+                                    <Alert message="Social Media tags" type="success" showIcon />
 
                                 </Col>
                                 <Col xs={24} sm={24} md={12} lg={12} xl={12} className="mb-24">
